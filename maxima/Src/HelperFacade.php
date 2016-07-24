@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Facade;
 class HelperFacade extends Facade
 {
 
-	public function static getFacadeAccessor()
+	public static function getFacadeAccessor()
 	{
-		return 'register helper';
+		return 'register-helper';
 	}
 
 }

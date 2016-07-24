@@ -157,7 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Maxima\Src\HelperServiceProvider::class,
-
+        Yajra\Datatables\DatatablesServiceProvider::class,
     ],
 
     /*
@@ -206,6 +206,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Helper'=> Maxima\Src\HelperFacade::class,
+        'Table' => Yajra\Datatables\Facades\Datatables::class,
     ],
 
 ];
