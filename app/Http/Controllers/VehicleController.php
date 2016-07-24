@@ -78,7 +78,7 @@ class VehicleController extends Controller
     	try
     	{
     		$model->delete();
-    		return redirect('vehicle')->withSuccess('Data has been saved!');
+    		return redirect('vehicle')->withSuccess('Data has been deleted!');
     	}catch(\Exception $e){
     		return redirect('vehicle')->withSuccess('Data has cannot be deleted!');
     	}
