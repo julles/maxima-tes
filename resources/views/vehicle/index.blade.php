@@ -24,6 +24,7 @@
                         <thead>
                             <th>Vehicle No</th>
                             <th>Description</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </thead>
 
@@ -38,6 +39,7 @@
 <script type="text/javascript">
     
     $(function() {
+     $.fn.dataTable.ext.errMode = 'none';
         $('#table').DataTable({
             processing: true,
             serverSide: true,
@@ -45,7 +47,8 @@
             columns: [
                 { data: 'vehicle_no', name: 'vehicle_no'},
                 { data: 'description', name: 'description'},
-                { data: 'action', name: 'action'},
+                { data: 'status', name: 'status'},
+                { data: 'action', name: 'action',searchable : false,orderable:false,},
             ]
         });
     });

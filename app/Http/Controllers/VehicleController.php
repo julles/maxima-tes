@@ -23,7 +23,7 @@ class VehicleController extends Controller
 	public function getData()
 	{
 		$query = $this->model
-			->select('id','vehicle_no','description');
+			->select('id','vehicle_no','description','status');
 
 		$table = Table::of($query)
 			->addColumn('action' , function($model){

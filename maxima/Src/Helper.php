@@ -5,7 +5,7 @@ use App\User;
 
 class Helper
 {
-	public function setMenus()
+	public function setMenusOwner()
 	{
 		return [
 		
@@ -18,11 +18,16 @@ class Helper
 	{
 		$generateHtmlMenu = "";
 
+		$user = Auth::user();
+
 		if(Auth::check())
 		{
-			foreach($this->setMenus() as $url => $label)
+			if($user->status == 'owner')
 			{
-				$generateHtmlMenu .= '<li><a href = "'.$url.'">'.$label.'</a></li>';
+				foreach($this->setMenusOwner() as $url => $label)
+				{
+					$generateHtmlMenu .= '<li><a href = "'.$url.'">'.$label.'</a></li>';
+				}
 			}
 		}
 
