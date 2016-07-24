@@ -33,12 +33,26 @@ composer install
 
 ```
 
+Configure your connection database in .env file
+
+``` sh
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=yourdatabase
+DB_USERNAME=username
+DB_PASSWORD=secrets
+
+```
+
 Migrating Database
 
 ``` sh 
 php artisan migrate
 
 ``` 
+
 
 Finish
 
