@@ -8,7 +8,8 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page.
+                    Application Test <br><br>
+                    Developer : <a href = "http://muhamadreza.id">Muhamad Reza AR</a>
                 </div>
             </div>
         </div>

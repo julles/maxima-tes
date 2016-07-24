@@ -14,6 +14,13 @@ class Helper
 		];
 	}
 
+	public function setMenusRenter()
+	{
+		return [
+			url('booking-vehicle')	=> 'Booking Vehicle',
+		];
+	}
+
 	public function getMenus()
 	{
 		$generateHtmlMenu = "";
@@ -25,6 +32,11 @@ class Helper
 			if($user->status == 'owner')
 			{
 				foreach($this->setMenusOwner() as $url => $label)
+				{
+					$generateHtmlMenu .= '<li><a href = "'.$url.'">'.$label.'</a></li>';
+				}
+			}else{
+				foreach($this->setMenusRenter() as $url => $label)
 				{
 					$generateHtmlMenu .= '<li><a href = "'.$url.'">'.$label.'</a></li>';
 				}

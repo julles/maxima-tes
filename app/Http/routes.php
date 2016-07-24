@@ -19,4 +19,8 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::controller('vehicle','VehicleController');
+Route::group(['middleware'=>['auth']] , function(){
+	Route::controller('vehicle','VehicleController');
+	Route::controller('booking-vehicle','BookingVehicleController');
+});
+
