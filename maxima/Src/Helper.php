@@ -9,7 +9,7 @@ class Helper
 	{
 		return [
 		
-			url('vehicle')	=> 'Vehicle',
+			'vehicle'	=> 'Vehicle',
 		
 		];
 	}
@@ -17,7 +17,7 @@ class Helper
 	public function setMenusRenter()
 	{
 		return [
-			url('booking-vehicle')	=> 'Booking Vehicle',
+			'booking-vehicle'	=> 'Booking Vehicle',
 		];
 	}
 
@@ -33,12 +33,12 @@ class Helper
 			{
 				foreach($this->setMenusOwner() as $url => $label)
 				{
-					$generateHtmlMenu .= '<li><a href = "'.$url.'">'.$label.'</a></li>';
+					$generateHtmlMenu .= '<li><a href = "'.url($url).'">'.$label.'</a></li>';
 				}
 			}else{
 				foreach($this->setMenusRenter() as $url => $label)
 				{
-					$generateHtmlMenu .= '<li><a href = "'.$url.'">'.$label.'</a></li>';
+					$generateHtmlMenu .= '<li><a href = "'.url($url).'">'.$label.'</a></li>';
 				}
 			}
 		}

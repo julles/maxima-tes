@@ -19,7 +19,7 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::group(['middleware'=>['auth']] , function(){
+Route::group(['middleware'=>['auth','accessPage']] , function(){
 	Route::controller('vehicle','VehicleController');
 	Route::controller('booking-vehicle','BookingVehicleController');
 });
